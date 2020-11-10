@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #388149;
+  --secondary-color: #D2AC5D;
+  --light-color: #EBEBEB;
+  --dark-color: #141414;
+  --max-width: 1366px;  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  background: var(--light-color);
+}
