@@ -4,6 +4,7 @@
   --light-color: #EBEBEB;
   --dark-color: #141414;
   --max-width: 1366px;  
+  font-size: 10px;
 }
 
 * {
@@ -12,7 +13,132 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: gotham;
+  src: url(/fonts/Gotham-Ultra.otf);
+  font-style: ultra;
+  font-weight: 400;
+}
+@font-face {
+  font-family: gotham;
+  src: url(/fonts/Gotham-Black.otf);
+  font-style: _black;
+  font-weight: 300;
+}
+@font-face {
+  font-family: gotham;
+  src: url(/fonts/Gotham-Book.otf);
+  font-style: book;
+  font-weight: 200;
+}
+@font-face {
+  font-family: gotham;
+  src: url(/fonts/Gotham-Thin.otf);
+  font-style: thin;
+  font-weight: 100;
+}
+
+
+h1 {
+  font-family: gotham;
+  font-weight: 400;
+  color: var(--light-color);
+  font-size: 6rem;
+}
+
+h2 {
+  font-family: gotham;
+  font-weight: 300;
+  color: var(--light-color);
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-family: gotham;
+  font-weight: 200;
+  color: var(--light-color);
+  font-size: 1.8rem;
+}
+
+p {
+  font-family: gotham;
+  font-weight: 100;
+  color: var(--light-color);
+  font-size: 1.8rem;
+}
+
 body {
   line-height: 1.5;
   background: var(--light-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utility */
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+/* Navigation */
+
+#main-nav {
+  font-family: gotham;
+  font-weight: 200;
+  font-size: 1.8rem;
+}
+
+#main-nav .container {
+  display: grid;
+  grid-template-columns: 7fr 2fr;
+  padding: 1 rem;
+  align-items: center;
+  height: 50px;
+}
+
+#main-nav .navbtn-ladies {
+  color: var(--secondary-color);
+}
+
+#main-nav ul {
+  justify-self: end;
+  display: flex;
+}
+
+#main-nav ul li a {
+  margin: 1rem;
+  color: var(--light-color);
+}
+
+#main-nav .navbtn-primary:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+#main-nav .navbtn-secondary:hover {
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Hero object */
+
+.hero {
+  background: url('../img/ifb-modo.jpg') no-repeat center center/cover;
+  height: 100vh; 
+}
+
+#hero-article .hero-container {
+  display: grid;
+  grid-template-areas: 'chevron-left hero-article chevron-right'
 }
