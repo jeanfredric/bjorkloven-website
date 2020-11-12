@@ -1,6 +1,8 @@
 :root {
   --primary-color: #388149;
+  --primary-color-dark: #347643;
   --secondary-color: #D2AC5D;
+  --secondary-color-dark: #BF9D55;
   --light-color: #EBEBEB;
   --dark-color: #141414;
   --max-width: 1366px;  
@@ -12,6 +14,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Fonts */
 
 @font-face {
   font-family: gotham;
@@ -93,6 +97,41 @@ a {
   overflow: hidden;
 }
 
+/* Buttons */
+
+.btn-primary {
+  display: inline-block;
+  font-family: gotham;
+  font-weight: 200;
+  font-size: 1.8rem;
+  color: var(--light-color);
+  background: var(--primary-color);
+  border-radius: 3.6rem;
+  padding: 8px 16px 6px 16px;
+  margin: 15px 20px;
+}
+
+.btn-primary:hover {
+  background: var(--primary-color-dark);
+}
+
+.btn-secondary {
+  display: inline-block;
+  font-family: gotham;
+  font-weight: 200;
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  background: transparent;
+  border: solid 2px;
+  border-radius: 3.6rem;
+  padding: 8px 16px 6px 16px;
+  margin: 15px 20px;
+}
+
+.btn-secondary:hover {
+  color: var(--secondary-color-dark);
+}
+
 /* Navigation */
 
 #main-nav {
@@ -138,7 +177,27 @@ a {
   height: 100vh; 
 }
 
-#hero-article .hero-container {
+.hero-container {
   display: grid;
-  grid-template-areas: 'chevron-left hero-article chevron-right'
+  /* grid-template-areas: 'chevron-left hero-article hero-article hero-article chevron-right'; */
+  grid-template-columns: 2fr 5fr 2fr;
+  height: 70vh;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  
+
 }
+
+.hero-article {
+  padding: 0px 0px;
+}
+
+.chevron-left {
+}
+
+.chevron-right {
+
+}
+
+.material-icons.md-48 { font-size: 48px; }
