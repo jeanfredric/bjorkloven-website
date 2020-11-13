@@ -15,7 +15,21 @@
   box-sizing: border-box;
 }
 
-/* Fonts */
+/* Utility */
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  /* padding: 0 2rem; */
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Fonts and text */
 
 @font-face {
   font-family: gotham;
@@ -69,6 +83,8 @@ p {
   font-weight: 100;
   color: var(--light-color);
   font-size: 1.8rem;
+  /* display: inline-block;  */
+
 }
 
 body {
@@ -77,7 +93,7 @@ body {
 }
 
 ul {
-  list-style: none;
+  list-style: none; /* Removes the dots */
 }
 
 img {
@@ -86,15 +102,6 @@ img {
 
 a {
   text-decoration: none;
-}
-
-/* Utility */
-
-.container {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 0 2rem;
-  overflow: hidden;
 }
 
 /* Buttons */
@@ -138,27 +145,45 @@ a {
   font-family: gotham;
   font-weight: 200;
   font-size: 1.8rem;
+  grid-column: 1 / span 12;
+  height: 7vh;
+
+  /* Nav-bar consits of its own grid */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  /* Center items in cell vertically */
+  align-items: center; 
 }
 
-#main-nav .container {
-  display: grid;
-  grid-template-columns: 7fr 2fr;
-  padding: 1 rem;
-  align-items: center;
-  height: 50px;
-}
 
 #main-nav .navbtn-ladies {
   color: var(--secondary-color);
+  grid-column: 1 / span 2;
+  text-transform: uppercase;
+}
+
+#main-nav .navbtn-ladies:hover {
+  color: var(--secondary-color-dark);
+}
+
+#main-nav a {
+  vertical-align: middle;
+}
+
+#main-nav p {
+  grid-column: 4 / span 6;
+  text-align: center;
 }
 
 #main-nav ul {
+  grid-column: 10 / span 3;
   justify-self: end;
-  display: flex;
+  display: flex; /* To place links next to each other instead of on top of */
 }
 
 #main-nav ul li a {
-  margin: 1rem;
+  margin: 2rem;
   color: var(--light-color);
 }
 
@@ -170,6 +195,11 @@ a {
   border-bottom: 2px solid var(--secondary-color);
 }
 
+#main-nav ul li .hamburger-menu {
+  font-size: 3.6rem;
+  bottom: 0.6rem;
+}
+
 /* Hero object */
 
 .hero {
@@ -177,27 +207,55 @@ a {
   height: 100vh; 
 }
 
-.hero-container {
-  display: grid;
-  /* grid-template-areas: 'chevron-left hero-article hero-article hero-article chevron-right'; */
-  grid-template-columns: 2fr 5fr 2fr;
-  height: 70vh;
-  text-align: center;
-  justify-content: center;
-  align-content: center;
-  
-
-}
-
 .hero-article {
-  padding: 0px 0px;
+  grid-column: 3 / span 8;
+  grid-row: 2 / span 5;
+  height: 77.5vh;
+  padding-bottom: 15.5vh;
+  overflow: hidden;
+
+  /*Center the content in cell */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Horisontellt */
+  align-items: center; /* Vertikalt */  
 }
 
 .chevron-left {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 4;
+  height: 62vh;
+  opacity: 0.6;
+
+  /* Center cell content */
+  display: flex;
+  justify-content: center; /* Horisontal */
+  align-items: center; /* Vertical */
 }
 
 .chevron-right {
+  grid-column: 11 / span 2;
+  grid-row: 2 / span 4;
+  height: 62vh;
+  opacity: 0.6; 
 
+  /* Center cell content */
+  display: flex;
+  justify-content: center; /* Horisontal */
+  align-items: center; /* Vertical */
 }
 
-.material-icons.md-48 { font-size: 48px; }
+/* Icons */
+
+.material-icons.md-48 { font-size: 4.8rem; }
+
+/* Center icon with text */
+.material-icons, .icon-text {
+  vertical-align: middle;
+}
+
+/* Center icon with text */
+.icon-align-to-text {
+  position:relative;
+  bottom:0.2rem;
+} 
