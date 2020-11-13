@@ -4,6 +4,7 @@
   --secondary-color: #D2AC5D;
   --secondary-color-dark: #BF9D55;
   --light-color: #EBEBEB;
+  --light-color-menu: #C2C2C2;
   --dark-color: #141414;
   --max-width: 1366px;  
   font-size: 10px;
@@ -37,6 +38,7 @@
   font-style: ultra;
   font-weight: 400;
 }
+
 @font-face {
   font-family: gotham;
   src: url(/fonts/Gotham-Black.otf);
@@ -62,6 +64,7 @@ h1 {
   font-weight: 400;
   color: var(--light-color);
   font-size: 6rem;
+  letter-spacing: 0.4rem;
 }
 
 h2 {
@@ -178,12 +181,13 @@ a {
 
 #main-nav ul {
   grid-column: 10 / span 3;
-  justify-self: end;
   display: flex; /* To place links next to each other instead of on top of */
+  justify-content: flex-end;  
 }
 
 #main-nav ul li a {
-  margin: 2rem;
+  margin: 4rem;
+  margin-right: 0; /* The link to the far right should be at the end of container */
   color: var(--light-color);
 }
 
@@ -195,7 +199,7 @@ a {
   border-bottom: 2px solid var(--secondary-color);
 }
 
-#main-nav ul li .hamburger-menu {
+#main-nav  .hamburger-menu {
   font-size: 3.6rem;
   bottom: 0.6rem;
 }
@@ -245,9 +249,55 @@ a {
   align-items: center; /* Vertical */
 }
 
+/* Menu */
+
+#menu {
+  font-family: gotham;
+  font-weight: 400;
+  font-size: 6rem;
+  color: var(--light-color);
+  height: 84.5vh;
+  grid-column: 2 / span 10;
+
+  /* Center cell content */
+  display: flex;
+  justify-content: center; /* Horisontal */
+  align-items: center; /* Vertical */
+  text-align: center;
+
+  padding-bottom: 10vh;
+}
+
+#menu-nav {
+  font-family: gotham;
+  font-weight: 200;
+  font-size: 1.8rem;
+  color: var(--light-color);
+  grid-column: 12 / span 1;
+  height: 7vh;
+
+  /* Center cell content */
+  display: flex;
+  justify-content: flex-end; /* Horisontal */
+  align-items: center; /* Vertical */
+  text-align: center;
+  }
+
+#menu ul li a {
+  color: var(--light-color-menu);
+  letter-spacing: 0.4rem;
+}
+
+#menu ul li a:hover {
+  color: var(--light-color);
+}
+
 /* Icons */
 
 .material-icons.md-48 { font-size: 4.8rem; }
+
+.material-icons.md-36 { font-size: 3.6rem; }
+
 
 /* Center icon with text */
 .material-icons, .icon-text {
@@ -259,3 +309,9 @@ a {
   position:relative;
   bottom:0.2rem;
 } 
+
+.back-menu {
+  color: var(--light-color);
+  font-size: 3.6rem;
+  bottom: 0.6rem;
+}
