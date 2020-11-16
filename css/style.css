@@ -113,12 +113,13 @@ a {
   display: inline-block;
   font-family: gotham;
   font-weight: 200;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
   color: var(--light-color);
   background: var(--primary-color);
   border-radius: 3.6rem;
   padding: 8px 16px 6px 16px;
-  margin: 15px 20px;
+  margin: 30px 20px 10px 20px;
 }
 
 .btn-primary:hover {
@@ -129,13 +130,14 @@ a {
   display: inline-block;
   font-family: gotham;
   font-weight: 200;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
   color: var(--secondary-color);
   background: transparent;
   border: solid 2px;
   border-radius: 3.6rem;
   padding: 8px 16px 6px 16px;
-  margin: 15px 20px;
+  margin: 30px 20px 10px 20px;
 }
 
 .btn-secondary:hover {
@@ -207,7 +209,7 @@ a {
 /* Hero object */
 
 .hero {
-  background: url('../img/ifb-modo.jpg') no-repeat center center/cover;
+  background: url('../img/ifb-modo.png') no-repeat center center/cover;
   height: 100vh; 
 }
 
@@ -292,6 +294,92 @@ a {
   color: var(--light-color);
 }
 
+/* Index page */
+
+.index-bg {
+  display: flex;
+
+  text-align: center;
+
+  
+}
+
+.index-bg-1 {
+  width: 50vw;
+  height: 100vh;
+  background: url('../img/ladies-calm.png') no-repeat center center/cover;
+  border-right: var(--dark-color) 0px solid;
+
+    /*Center the content in cell */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Horisontellt */
+    align-items: center; /* Vertikalt */  
+    padding-bottom: 30vh;
+
+}
+
+.index-bg-2 {
+  width: 50vw;
+  height: 100vh;
+  background: url('../img/mens-calm.png') no-repeat center center/cover;
+
+    /*Center the content in cell */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Horisontellt */
+    align-items: center; /* Vertikalt */ 
+    
+    padding-bottom: 30vh;
+}
+
+input[type=checkbox] + label {
+  color: var(--light-color);
+  font-family: gotham;
+  font-weight: 200;
+  font-size: 1.4rem;
+  padding: 6px;
+  
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before{
+  content: "\2714";
+  /* border: 0.1em solid var(--light-color); */
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.1em;
+  padding-bottom: 0.2em;
+  padding-right: 0.1em;
+  margin-right: 0.5em;
+  /* vertical-align: bottom; */
+  color: transparent;
+  background-color: var(--light-color);
+  transition: .2s;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+
+input[type=checkbox]:checked + label:before {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+
+
+
+
 /* Icons */
 
 .material-icons.md-48 { font-size: 4.8rem; }
@@ -307,7 +395,7 @@ a {
 /* Center icon with text */
 .icon-align-to-text {
   position:relative;
-  bottom:0.2rem;
+  bottom:0.1rem;
 } 
 
 .back-menu {
