@@ -16,6 +16,7 @@
   box-sizing: border-box;
 }
 
+
 /* Utility */
 
 .container {
@@ -29,6 +30,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+
 
 /* Fonts and text */
 
@@ -57,7 +59,6 @@
   font-style: thin;
   font-weight: 100;
 }
-
 
 h1 {
   font-family: gotham;
@@ -144,6 +145,7 @@ a {
   color: var(--secondary-color-dark);
 }
 
+
 /* Navigation */
 
 #main-nav {
@@ -160,7 +162,6 @@ a {
   /* Center items in cell vertically */
   align-items: center; 
 }
-
 
 #main-nav .navbtn-ladies {
   color: var(--secondary-color);
@@ -206,14 +207,34 @@ a {
   bottom: 0.6rem;
 }
 
+
 /* Hero object */
 
-.hero {
+.mens-bg {
   background: url('../img/ifb-modo.png') no-repeat center center/cover;
   height: 100vh; 
 }
 
-.hero-article {
+.hero-article-mens {
+  grid-column: 3 / span 8;
+  grid-row: 2 / span 5;
+  height: 77.5vh;
+  padding-bottom: 15.5vh;
+  overflow: hidden;
+
+  /*Center the content in cell */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Horisontellt */
+  align-items: center; /* Vertikalt */  
+}
+
+.ladies-bg {
+  background: url('../img/ifb-modo-ladies.png') no-repeat center center/cover;
+  height: 100vh; 
+}
+
+.hero-article-ladies {
   grid-column: 3 / span 8;
   grid-row: 2 / span 5;
   height: 77.5vh;
@@ -250,6 +271,7 @@ a {
   justify-content: center; /* Horisontal */
   align-items: center; /* Vertical */
 }
+
 
 /* Menu */
 
@@ -298,10 +320,7 @@ a {
 
 .index-bg {
   display: flex;
-
   text-align: center;
-
-  
 }
 
 .index-bg-1 {
@@ -375,9 +394,6 @@ input[type=checkbox]:checked + label:before {
   background-color: var(--primary-color);
   color: var(--light-color);
 }
-
-
-
 
 
 /* Icons */
