@@ -5,7 +5,11 @@
   --secondary-color-dark: #BF9D55;
   --light-color: #EBEBEB;
   --light-color-menu: #C2C2C2;
-  --dark-color: #141414;
+  --dark-color: #141414; /* 87% high emphasis */
+  --dark-color-medium: #575757; /* 60% medium emphasis */
+  --dark-color-disabled: #8F8F8F; /* 38% disabled */
+  
+  
   --max-width: 1366px;  
   font-size: 10px;
 }
@@ -29,6 +33,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 100vh;
 }
 
 
@@ -47,6 +53,14 @@
   font-style: _black;
   font-weight: 300;
 }
+
+@font-face {
+  font-family: gotham;
+  src: url(/fonts/Gotham-Medium.otf);
+  font-style: medium;
+  font-weight: 250;
+}
+
 @font-face {
   font-family: gotham;
   src: url(/fonts/Gotham-Book.otf);
@@ -146,6 +160,57 @@ a {
 }
 
 
+/* Backgrounds */
+
+.index-bg {
+  display: flex;
+  text-align: center;
+}
+
+.index-bg-1 {
+  width: 50vw;
+  height: 100vh;
+  background: url('../img/ladies-calm.png') no-repeat center center/cover;
+  border-right: var(--dark-color) 0px solid;
+
+  /*Center the content in cell */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Horisontellt */
+  align-items: center; /* Vertikalt */  
+  padding-bottom: 30vh;
+
+}
+
+.index-bg-2 {
+  width: 50vw;
+  height: 100vh;
+  background: url('../img/mens-calm.png') no-repeat center center/cover;
+
+  /*Center the content in cell */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Horisontellt */
+  align-items: center; /* Vertikalt */ 
+  
+  padding-bottom: 30vh;
+}
+
+.mens-bg {
+  background: url('../img/ifb-modo.png') no-repeat center center/cover;
+  height: 100vh; 
+}
+
+.ladies-bg {
+  background: url('../img/ifb-modo-ladies.png') no-repeat center center/cover;
+  height: 100vh; 
+}
+
+.statistics-bg {
+  background: url('../img/smguld.png') no-repeat center center/cover;
+  height: 100vh;
+}
+
 /* Navigation */
 
 #main-nav {
@@ -208,12 +273,7 @@ a {
 }
 
 
-/* Hero object */
-
-.mens-bg {
-  background: url('../img/ifb-modo.png') no-repeat center center/cover;
-  height: 100vh; 
-}
+/* Ladies/mens first page */
 
 .hero-article-mens {
   grid-column: 3 / span 8;
@@ -227,11 +287,6 @@ a {
   flex-direction: column;
   justify-content: center; /* Horisontellt */
   align-items: center; /* Vertikalt */  
-}
-
-.ladies-bg {
-  background: url('../img/ifb-modo-ladies.png') no-repeat center center/cover;
-  height: 100vh; 
 }
 
 .hero-article-ladies {
@@ -318,40 +373,6 @@ a {
 
 /* Index page */
 
-.index-bg {
-  display: flex;
-  text-align: center;
-}
-
-.index-bg-1 {
-  width: 50vw;
-  height: 100vh;
-  background: url('../img/ladies-calm.png') no-repeat center center/cover;
-  border-right: var(--dark-color) 0px solid;
-
-    /*Center the content in cell */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Horisontellt */
-    align-items: center; /* Vertikalt */  
-    padding-bottom: 30vh;
-
-}
-
-.index-bg-2 {
-  width: 50vw;
-  height: 100vh;
-  background: url('../img/mens-calm.png') no-repeat center center/cover;
-
-    /*Center the content in cell */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Horisontellt */
-    align-items: center; /* Vertikalt */ 
-    
-    padding-bottom: 30vh;
-}
-
 input[type=checkbox] + label {
   color: var(--light-color);
   font-family: gotham;
@@ -419,3 +440,67 @@ input[type=checkbox]:checked + label:before {
   font-size: 3.6rem;
   bottom: 0.6rem;
 }
+
+
+/* Statistics */
+.statistics h3 {
+  color: var(--secondary-color);
+  grid-column: 2;
+  grid-row: 1;
+  margin: 4rem 0 0 0;
+}
+
+.statistics table {
+  font-family: gotham;
+  grid-column: 2 / span 10;
+  grid-row: 2 / span 10;
+  border-collapse: collapse;
+}
+
+th{
+  color: var(--secondary-color);
+  font-weight: 250;
+  font-size: 1rem;
+  /* border: #ccc 1px solid; */
+}
+
+td {
+  color: var(--light-color);
+  font-size: 1.2rem;
+  font-weight: 250;
+  /* border: #ccc 1px solid; */
+  text-align: center;
+  padding: 0.7rem 0;
+}
+
+td.ifb {
+  color: var(--secondary-color);
+}
+
+td.left-align {
+  text-align: left;
+  padding: 0;
+}
+
+td.points {
+  color: var(--secondary-color);
+}
+
+td.ranking {
+  width: 4rem;
+}
+
+tr.border {
+  border-bottom: 1px solid rgba(235, 235, 235, 0.1);;
+}
+
+tr:hover {
+  background: rgba(235, 235, 235, 0.05);
+}
+
+tr:hover:first-child {
+  background: transparent;
+}
+
+
+/* Footer */
