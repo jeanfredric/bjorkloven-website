@@ -211,7 +211,7 @@ a {
   height: 100vh; 
 }
 
-.statistics-bg {
+#statistics-bg {
   background: url('../img/smguld.png') no-repeat center center/cover;
   height: 100vh;
 }
@@ -458,7 +458,7 @@ audio {
 
 
 /* Statistics */
-.statistics h3 {
+#statistics h3 {
   color: var(--secondary-color);
 }
 
@@ -481,25 +481,21 @@ audio {
   margin: 4rem;
 }
 
-.actual {
-  color: pink;
-}
 
-
-.statistics table {
+#statistics table {
   font-family: gotham;
   grid-column: 2 / span 10;
   grid-row: 2 / span 10;
   border-collapse: collapse;
 }
 
-.statistics th{
+#statistics th{
   color: var(--secondary-color);
   font-weight: 250;
   font-size: 1rem;
 }
 
-.statistics td {
+#statistics td {
   color: var(--light-color);
   font-size: 1.2rem;
   font-weight: 250;
@@ -507,32 +503,32 @@ audio {
   padding: 0.7rem 0;
 }
 
-.statistics td.ifb {
+#statistics td.ifb {
   color: var(--secondary-color);
 }
 
-.statistics td.left-align {
+#statistics td.left-align {
   text-align: left;
   padding: 0;
 }
 
-.statistics td.points {
+#statistics td.points {
   color: var(--secondary-color);
 }
 
-.statistics td.ranking {
+#statistics td.ranking {
   width: 4rem;
 }
 
-.statistics tr.border {
+#statistics tr.border {
   border-bottom: 1px solid rgba(235, 235, 235, 0.1);;
 }
 
-.statistics tr:hover {
+#statistics tr:hover {
   background: rgba(235, 235, 235, 0.05);
 }
 
-.statistics tr:hover:first-child {
+#statistics tr:hover:first-child {
   background: transparent;
 }
 
