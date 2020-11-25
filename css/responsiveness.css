@@ -1,0 +1,156 @@
+@media(max-width: 1115px) {
+  #main-nav ul {
+    grid-column: 12;
+    width: 7rem;
+  }
+
+
+  #main-nav ul li:nth-child(1), #main-nav ul li:nth-child(2) {
+    display: none;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 250;
+
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  .btn-primary {
+    margin: 30px 10px 10px 15px;
+  }
+
+  .btn-secondary {
+    margin: 30px 10px 10px 15px;
+  }
+
+}
+
+@media(max-width: 910px) {
+  #main-nav .navbtn-ladies {
+    display: none;
+  }
+
+  #main-nav p {
+    grid-column: 1 / span 11;
+    text-align: left;
+    margin-left: 1rem;
+  }
+
+  #menu {
+    font-size: 3.4rem;
+    line-height: 2;
+  }
+
+  h1 {
+    font-size: 3.4rem;
+  }
+
+  h2 {
+    font-size: 2.0rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .btn-primary {
+   font-size: 1.4rem;
+  }
+
+  .btn-secondary {
+    font-size: 1.4rem;
+  }
+
+  footer h3 {
+    font-size: 1.4rem;
+  }
+
+  footer input[type=text] {
+    width: 100px;
+  }
+  
+}
+
+
+@media(max-width: 600px) {
+  #main-nav p {
+    font-size: 1.1rem;
+  }
+
+  #menu {
+    font-size: 2.4rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    padding-top: 0.4rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    padding-top: 0.2rem;
+  }
+
+  .hero-article-ladies p{
+    padding-left: 6rem;
+  }
+
+  .chevron-left, .chevron-right {
+    display: none;
+  }
+  
+  .hero-article-mens, .hero-article-ladies {
+    grid-column: 1 / span 12;
+  }
+
+  .btn-primary {
+    margin: 20px 0px 10px 15px;
+  }
+
+  .btn-secondary {
+    margin: 20px 0px 10px 15px;
+  }
+
+  .statistics-menu ul li {
+    margin: 2rem;
+  }
+
+  footer .flex {
+    flex-wrap: wrap;
+  }
+
+  footer .footer-column {
+    width: 50vw;
+  }
+
+  .footer-column ul {
+    margin-left: 6rem;
+    width: 100%;
+  }
+
+  .index-bg {
+    flex-direction: column;
+  }
+
+  .index-bg-1, .index-bg-2 {
+    width: 100vw;
+    height: 50vh;
+    padding-bottom: 0;
+  }
+  
+  audio {
+    left: 10vw;
+  }
+}
