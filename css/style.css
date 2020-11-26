@@ -50,21 +50,21 @@ footer .flex {
   font-family: gotham;
   src: url(/fonts/Gotham-Ultra.otf);
   font-style: ultra;
-  font-weight: 400;
+  font-weight: 900;
 }
 
 @font-face {
   font-family: gotham;
   src: url(/fonts/Gotham-Black.otf);
   font-style: _black;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 @font-face {
   font-family: gotham;
   src: url(/fonts/Gotham-Medium.otf);
   font-style: medium;
-  font-weight: 250;
+  font-weight: 400;
 }
 
 @font-face {
@@ -82,7 +82,7 @@ footer .flex {
 
 h1 {
   font-family: gotham;
-  font-weight: 400;
+  font-weight: 900;
   color: var(--light-color);
   font-size: 6rem;
   letter-spacing: 0.4rem;
@@ -90,7 +90,7 @@ h1 {
 
 h2 {
   font-family: gotham;
-  font-weight: 300;
+  font-weight: 700;
   color: var(--light-color);
   font-size: 3.6rem;
 }
@@ -325,21 +325,18 @@ a {
 /* Hamburger menu */
 
 #menu {
-  font-family: gotham;
-  font-weight: 400;
-  font-size: 6rem;
-  color: var(--light-color);
   height: 84.5vh;
   grid-column: 1 / span 12;
-
+  
   /* Center cell content */
   display: flex;
   justify-content: center; /* Horisontal */
   align-items: center; /* Vertical */
   text-align: center;
-
+  
   padding-bottom: 10vh;
 }
+
 
 #menu-nav {
   font-family: gotham;
@@ -349,20 +346,20 @@ a {
   grid-column: 12 / span 1;
   height: 7vh;
   margin-right: 1.6rem;
-
+  
   /* Center cell content */
   display: flex;
   justify-content: flex-end; /* Horisontal */
   align-items: center; /* Vertical */
   text-align: center;
-  }
+}
 
-#menu ul li a {
+#menu ul li a h1 {
   color: var(--light-color-menu);
   letter-spacing: 0.4rem;
 }
 
-#menu ul li a:hover {
+#menu ul li a h1:hover {
   color: var(--light-color);
 }
 
@@ -478,14 +475,14 @@ audio {
 
 #statistics th{
   color: var(--secondary-color);
-  font-weight: 250;
+  font-weight: 400;
   font-size: 1rem;
 }
 
 #statistics td {
   color: var(--light-color);
   font-size: 1.2rem;
-  font-weight: 250;
+  font-weight: 400;
   text-align: center;
   padding: 0.7rem 0;
 }
@@ -532,7 +529,7 @@ footer {
 }
 
 footer h3 {
-  font-weight: 250;
+  font-weight: 400;
 }
 
 footer .footer-column {
