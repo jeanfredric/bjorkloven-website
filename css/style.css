@@ -282,21 +282,7 @@ a {
 
 /* Ladies/mens first page */
 
-.hero-article-mens {
-  grid-column: 3 / span 8;
-  grid-row: 2 / span 5;
-  height: 77.5vh;
-  padding-bottom: 15.5vh;
-  overflow: hidden;
-
-  /*Center the content in cell */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Horisontellt */
-  align-items: center; /* Vertikalt */  
-}
-
-.hero-article-ladies {
+.hero-article {
   grid-column: 3 / span 8;
   grid-row: 2 / span 5;
   height: 77.5vh;
