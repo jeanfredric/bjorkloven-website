@@ -471,6 +471,7 @@ audio {
   grid-column: 2 / span 10;
   grid-row: 2 / span 10;
   border-collapse: collapse;
+  width: 100%;
 }
 
 #statistics th{

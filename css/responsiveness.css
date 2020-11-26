@@ -23,6 +23,10 @@
     font-size: 1.4rem;
   }
 
+  #main-nav p {
+    font-size: 1.6rem;
+  }
+
   .btn-primary {
     margin: 30px 10px 10px 15px;
   }
@@ -42,6 +46,7 @@
     grid-column: 1 / span 11;
     text-align: left;
     margin-left: 1rem;
+    font-size: 1.6rem;
   }
 
   #menu {
