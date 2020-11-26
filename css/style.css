@@ -288,6 +288,7 @@ a {
   height: 77.5vh;
   padding-bottom: 15.5vh;
   overflow: hidden;
+  text-align: center;
 
   /*Center the content in cell */
   display: flex;

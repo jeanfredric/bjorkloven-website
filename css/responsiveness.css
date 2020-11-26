@@ -103,15 +103,15 @@
     padding-top: 0.2rem;
   }
 
-  .hero-article-ladies p{
-    padding-left: 6rem;
+  .hero-article p{
+    width: 90vw;
   }
 
   .chevron-left, .chevron-right {
     display: none;
   }
   
-  .hero-article-mens, .hero-article-ladies {
+  .hero-article {
     grid-column: 1 / span 12;
   }
 
