@@ -1,11 +1,11 @@
 @media(max-width: 1115px) {
-  #main-nav ul {
+  .main-nav ul {
     grid-column: 12;
     width: 7rem;
   }
 
 
-  #main-nav ul li:nth-child(1), #main-nav ul li:nth-child(2) {
+  .main-nav ul li:nth-child(1), .main-nav ul li:nth-child(2) {
     display: none;
   }
 
@@ -23,7 +23,7 @@
     font-size: 1.4rem;
   }
 
-  #main-nav p {
+  .main-nav p {
     font-size: 1.6rem;
   }
 
@@ -38,11 +38,11 @@
 }
 
 @media(max-width: 910px) {
-  #main-nav .navbtn-ladies {
+  .main-nav .navbtn-ladies {
     display: none;
   }
 
-  #main-nav p {
+  .main-nav p {
     grid-column: 1 / span 11;
     text-align: left;
     margin-left: 1rem;
@@ -86,7 +86,7 @@
 
 
 @media(max-width: 600px) {
-  #main-nav p {
+  .main-nav p {
     font-size: 1.1rem;
   }
 

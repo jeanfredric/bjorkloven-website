@@ -211,14 +211,14 @@ a {
   height: 100vh; 
 }
 
-#statistics-bg {
+.statistics-bg {
   background: url('../img/smguld.png') no-repeat center center/cover;
   height: 100vh;
 }
 
 /* Navigation */
 
-#main-nav {
+.main-nav {
   font-family: gotham;
   font-weight: 200;
   font-size: 1.8rem;
@@ -233,48 +233,48 @@ a {
   align-items: center; 
 }
 
-#main-nav .navbtn-ladies {
+.main-nav .navbtn-ladies {
   color: var(--secondary-color);
   grid-column: 1 / span 3;
   text-transform: uppercase;
   margin-left: 1.6rem;
 }
 
-#main-nav .navbtn-ladies:hover {
+.main-nav .navbtn-ladies:hover {
   color: var(--secondary-color-dark);
 }
 
-#main-nav a {
+.main-nav a {
   vertical-align: middle;
 }
 
-#main-nav p {
+.main-nav p {
   grid-column: 4 / span 6;
   text-align: center;
   margin-bottom: 0.8rem;
 }
 
-#main-nav ul {
+.main-nav ul {
   grid-column: 10 / span 3;
   display: flex; /* To place links next to each other instead of on top of */
   justify-content: flex-end;  
 }
 
-#main-nav ul li a {
+.main-nav ul li a {
   margin: 4rem;
   margin-right: 1.6rem; /* The link to the far right should be at the end of container */
   color: var(--light-color);
 }
 
-#main-nav .navbtn-primary:hover {
+.main-nav .navbtn-primary:hover {
   border-bottom: 2px solid var(--primary-color);
 }
 
-#main-nav .navbtn-secondary:hover {
+.main-nav .navbtn-secondary:hover {
   border-bottom: 2px solid var(--secondary-color);
 }
 
-#main-nav  .hamburger-menu {
+.main-nav  .hamburger-menu {
   font-size: 3.6rem;
   bottom: 0.6rem;
 }
