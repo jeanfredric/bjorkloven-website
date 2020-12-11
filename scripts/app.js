@@ -42,20 +42,20 @@ $(document).ready(function(){
   /* Listeners **********************************/
 
   $('.tickets-btn').click(function() {
-    $('.modal-backdrop').show();
-    $('.tickets-modal').show();
-    disableScroll();
+    $('.modal-backdrop').fadeIn(100);
+    $('.tickets-modal').fadeIn(100);
+    // disableScroll();
   });
 
   $('.modal-backdrop').click(function() {
-    $('.modal-backdrop').hide();
-    $('.tickets-modal').hide();
+    $('.modal-backdrop').fadeOut(100);
+    $('.tickets-modal').fadeOut(100);
     enableScroll();
   });
 
   $('.modal-backbtn').click(function() {
-    $('.modal-backdrop').hide();
-    $('.tickets-modal').hide();
+    $('.modal-backdrop').fadeOut(100);
+    $('.tickets-modal').fadeOut(100);
     enableScroll();
   });
 
@@ -63,7 +63,7 @@ $(document).ready(function(){
       ticketType = $(this).attr("value");
       setBoxText();
       calculatePrice();
-      $(".box").show();
+      $(".box").fadeIn(100);
   });
 
   $("select#nr-of-tickets").change(function() {
