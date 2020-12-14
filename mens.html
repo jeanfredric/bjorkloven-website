@@ -21,11 +21,6 @@ crossorigin="anonymous" defer></script>
 
   <!-- Front page background -->
   <div class="mens-bg">
-    <!-- CSS Grid Container-->
-    <div class="container">    
-      <!-- CSS Grid-->
-      <div class="grid">
-        
 
         <!-- Navigation bar -->
         <nav class="main-nav">
@@ -34,36 +29,48 @@ crossorigin="anonymous" defer></script>
           <ul>
             <li><a href="tickets.html" class="navbtn-primary">BILJETTER</a></li>
             <li><a href="shop.html" class="navbtn-secondary">SHOP</a></li>
-            <li><a href="menu.html"><i class="material-icons icon-align-to-text hamburger-menu md-36">menu</i></a></li>
+            <li><a href="#" id="hamburger"><i class="material-icons icon-align-to-text hamburger-menu md-36">menu</i></a></li>
           </ul>
         </nav>
 
         <!-- First page sliding articles -->
-        <aside class="chevron-left">
-          <p>
-            <i class="material-icons md-48">chevron_left</i>
-          </p>
-        </aside>
+        <div class="carousel">
+          <div class="slider">
 
-        <section class="hero-article">
-          <h1>NORRLANDSDERBY!</h1>
-          <h2>Björklöven - Modo</h2>
-          <p>Fredag 28 Februari 19:00</p>
-          <span> <!-- Span to place buttons next to each other -->
-            <a href="#" class="btn-primary tickets-btn">KÖP BILJETT</a>
-            <a href="article.html" class="btn-secondary">INFÖR</a>
-          </span>
-        </section>
+            <section class="hero-article">
+              <h1>NORRLANDSDERBY!</h1>
+              <h2>Björklöven - Modo</h2>
+              <p>Fredag 28 Februari 19:00</p>
+              <span> <!-- Span to place buttons next to each other -->
+                <a href="#" class="btn-primary tickets-btn">KÖP BILJETT</a>
+                <a href="article.html" class="btn-secondary">INFÖR</a>
+              </span>
+            </section>
 
-        <aside class="chevron-right">
-          <p>
-            <i class="material-icons md-48">chevron_right</i>
-          </p>
-        </aside>
-
-      </div>
-    </div>
-  </div>
+            <section class="hero-article">
+              <h1>Artikel 2</h1>
+              <h2>Liss Liss Olle Liss</h2>
+              <p>Köp den exklusiva Liss-tishan i souvenirshopen.</p>
+              <span> <!-- Span to place buttons next to each other -->
+                <!-- <a href="#" class="btn-primary tickets-btn">KÖP BILJETT</a> -->
+                <a href="article.html" class="btn-secondary">LÄS MER</a>
+              </span>
+            </section>            
+          </div> <!-- Slider -->
+          
+          <div class="controls">
+            <span class="chevron left"><i class="material-icons md-48">chevron_left</i></span>
+            <span class="chevron right"><i class="material-icons md-48">chevron_right</i></span>
+            
+            <ul>
+              <li class="selected"></li>
+              <li></li>
+            </ul>
+          </div>
+            
+            
+        </div> <!-- crousel -->
+  </div> <!-- bg -->
 
   <!-- Table and statistics -->
   <section id="statistics">
@@ -318,7 +325,6 @@ crossorigin="anonymous" defer></script>
       </table>
     </form>
 
-
     <div class="box">
       <ul>
         <li><p>Din order innehåller:</p></li>
@@ -336,5 +342,34 @@ crossorigin="anonymous" defer></script>
     <div class="price"><p><span class="grey">Totalbelopp </span> <span id="calculated-price">0</span> SEK</p></div>
     <a href="#" class="btn-primary payment-btn">TILL BETALNING</a>
   </div>
+
+  <!-- Hamburger menu -->
+
+<!-- Background -->
+<div class="hamburger-bg">
+  <!-- CSS Grid Container-->
+  <div class="container">    
+    <!-- CSS Grid-->
+    <div class="grid">
+      
+      <!-- Navigation bar -->
+      <nav id="menu-nav">
+        <a href="mens.html"><i class="material-icons icon-align-to-text back-menu md-36">clear</i></a>
+      </nav>
+      <!-- Menu -->
+      <section id="menu">
+        <ul>
+          <li><a href="tickets.html"><h1>BILJETTER</h1></a></li>
+          <li><a href="shop.html"><h1>SOUVENIRSHOP</h1></a></li>
+          <li><a href="mens.html#statistics"><h1>TABELL & STATISTK</h1></a></li>
+          <li><a href="news.html"><h1>NYHETER</h1></a></li>
+          <li><a href="ladies.html"><h1>DAMLAGET</h1></a></li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
