@@ -18,59 +18,83 @@ crossorigin="anonymous" defer></script>
   <script src="/scripts/app.js" defer></script>
 </head>
 <body>
+  <!-- Navigation bar -->
+  <div class="container">
+    <nav class="main-nav">
+      <a href="ladies.html" class="navbtn-ladies"><i class="material-icons icon-align-to-text">chevron_left</i>TILL DAMLAGET</a>
+      <a href="#" class="next-game"><p>NÄSTA HEMMAMATCH: BJÖRKLÖVEN - MODO 28/2</p></a>
+      <ul>
+        <li><a href="tickets.html" class="navbtn-primary">BILJETTER</a></li>
+        <li><a href="shop.html" class="navbtn-secondary">SHOP</a></li>
+        <li><a href="#" id="hamburger"><i class="material-icons icon-align-to-text hamburger-menu md-36">menu</i></a></li>
+      </ul>
+    </nav>
+  </div>
 
   <!-- Front page background -->
-  <div class="mens-bg">
 
-        <!-- Navigation bar -->
-        <nav class="main-nav">
-          <a href="ladies.html" class="navbtn-ladies"><i class="material-icons icon-align-to-text">chevron_left</i>TILL DAMLAGET</a>
-          <p>NÄSTA HEMMAMATCH: BJÖRKLÖVEN - MODO 28/2</p>
-          <ul>
-            <li><a href="tickets.html" class="navbtn-primary">BILJETTER</a></li>
-            <li><a href="shop.html" class="navbtn-secondary">SHOP</a></li>
-            <li><a href="#" id="hamburger"><i class="material-icons icon-align-to-text hamburger-menu md-36">menu</i></a></li>
-          </ul>
-        </nav>
+  <!-- First page sliding articles -->
+  <div class="carousel">
+    <div class="slider">
 
-        <!-- First page sliding articles -->
-        <div class="carousel">
-          <div class="slider">
-
-            <section class="hero-article">
-              <h1>NORRLANDSDERBY!</h1>
-              <h2>Björklöven - Modo</h2>
-              <p>Fredag 28 Februari 19:00</p>
-              <span> <!-- Span to place buttons next to each other -->
-                <a href="#" class="btn-primary tickets-btn">KÖP BILJETT</a>
-                <a href="article.html" class="btn-secondary">INFÖR</a>
-              </span>
-            </section>
-
-            <section class="hero-article">
-              <h1>Artikel 2</h1>
-              <h2>Liss Liss Olle Liss</h2>
-              <p>Köp den exklusiva Liss-tishan i souvenirshopen.</p>
-              <span> <!-- Span to place buttons next to each other -->
-                <!-- <a href="#" class="btn-primary tickets-btn">KÖP BILJETT</a> -->
-                <a href="article.html" class="btn-secondary">LÄS MER</a>
-              </span>
-            </section>            
-          </div> <!-- Slider -->
-          
-          <div class="controls">
-            <span class="chevron left"><i class="material-icons md-48">chevron_left</i></span>
-            <span class="chevron right"><i class="material-icons md-48">chevron_right</i></span>
-            
-            <ul>
-              <li class="selected"></li>
-              <li></li>
-            </ul>
+      <section>
+        <div class="hero-bg-1">
+          <div class="text-content">
+            <h1>NORRLANDSDERBY!</h1>
+            <h2>Björklöven - Modo</h2>
+            <p>Fredag 28 Februari 19:00</p>
+            <span> <!-- Span to place buttons next to each other -->
+              <a href="#" class="btn-primary tickets-btn">KÖP BILJETT</a>
+              <a href="article.html" class="btn-secondary">INFÖR</a>
+            </span>
           </div>
-            
-            
-        </div> <!-- crousel -->
-  </div> <!-- bg -->
+        </div>
+      </section>
+
+      <section>
+        <div class="hero-bg-2">
+          <div class="text-content">
+            <h1>NYTT I SHOPEN!</h1>
+            <h2>Lucky Liss t-shirt!</h2>
+            <p>Publikfavoriten Olle Liss har dedikerats en alldeles egen t-shirt. Souveniren finns endast i limiterad upplaga, skynda och köp innan den tar slut!</p>
+            <span> <!-- Span to place buttons next to each other -->
+              <!-- <a href="#" class="btn-primary tickets-btn">KÖP BILJETT</a> -->
+              <a href="article.html" class="btn-secondary">TILL SHOPEN</a>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="hero-bg-3">
+          <div class="text-content">
+            <h1>SEGER MOT TIMRÅ!</h1>
+            <h2></h2>
+            <p>Björklöven tog på tisdagen tredje raka seger, mycket tack vare en fullsatt A3 Arena. Timrå stod för motståndet och slutresultatet skrevs till 4-1.</p>
+            <span> <!-- Span to place buttons next to each other -->
+              <a href="#" class="btn-secondary">HÖJPUNKTER</a>
+              <a href="article.html" class="btn-secondary">LÄS MER</a>
+            </span>
+          </div>
+        </div>
+      </section>
+
+    </div> <!-- Slider -->
+    <div class="controls">
+      
+      <span class="chevron left"><i class="material-icons md-48">chevron_left</i></span>
+      <span class="chevron right"><i class="material-icons md-48">chevron_right</i></span>
+      
+      <ul>
+        <li class="selected"></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div> 
+
+  </div> <!-- carousel -->
+        
+
 
   <!-- Table and statistics -->
   <section id="statistics">

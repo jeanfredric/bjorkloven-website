@@ -111,34 +111,49 @@ const indicatorsParent = document.querySelector('.controls ul');
 const indicators = document.querySelectorAll('.controls li');
 
 let sectionIndex = 0;
-const nrOfSections = 2;
+const nrOfSections = 3;
 
-function setIndex() {
+let nextSection;
+const sectionTimerMills = 10000;
+
+function slideSection() {
   document.querySelector('.controls .selected').classList.remove('selected');
-  slider.style.transform = 'translate(' + (sectionIndex) * -50 + '%)';
+  indicatorsParent.children[sectionIndex].classList.add('selected');
+  slider.style.transform = 'translate(' + (sectionIndex) * -(100/3) + '%)';
+}
+
+function startAutoScroll() {
+  nextSection = setInterval(() => {
+    sectionIndex = (sectionIndex < (nrOfSections - 1) ? sectionIndex + 1 : 0);
+    slideSection();
+  }, sectionTimerMills);
+}
+
+function resetSectionTimer() {
+  clearInterval(nextSection);
+  startAutoScroll();
 }
 
 indicators.forEach((indicator, i) => {
   indicator.addEventListener('click', () => {
     document.querySelector('.controls .selected').classList.remove('selected');
     indicator.classList.add('selected');
-    slider.style.transform = 'translate(' + (i) * -50 + '%)';
+    slider.style.transform = 'translate(' + (i) * -(100/3) + '%)';
     sectionIndex = i;
-  })
+  resetSectionTimer();
+  });
 });
 
 rightArrow.addEventListener('click', () => {
   sectionIndex = (sectionIndex < (nrOfSections - 1) ? sectionIndex + 1 : 0);
-  document.querySelector('.controls .selected').classList.remove('selected');
-  indicatorsParent.children[sectionIndex].classList.add('selected');
-  slider.style.transform = 'translate(' + (sectionIndex) * -50 + '%)';
-
+  slideSection();
+  resetSectionTimer();
 });
 
 leftArrow.addEventListener('click', () => {
   sectionIndex = (sectionIndex > 0 ? sectionIndex - 1: (nrOfSections - 1));
-  document.querySelector('.controls .selected').classList.remove('selected');
-  indicatorsParent.children[sectionIndex].classList.add('selected');
-  slider.style.transform = 'translate(' + (sectionIndex) * -50 + '%)';
-  
+  slideSection();
+  resetSectionTimer();
 });
+
+startAutoScroll();
