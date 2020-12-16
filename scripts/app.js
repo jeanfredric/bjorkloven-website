@@ -5,7 +5,7 @@ $(document).ready(function(){
   let ticketType;
   let calculatedPrice = 0;
 
-  /* Functions *********************************/
+  /* Modals *********************************/
 
   function disableScroll() {
     $('html, body').css({
@@ -39,26 +39,36 @@ $(document).ready(function(){
     $("#calculated-price").text(calculatedPrice);
   }
 
-  /* Listeners **********************************/
+  $('.not-implemented').click(function() {
+    $('.modal-backdrop').fadeIn(100);
+    $('.modal.not-implemented-modal').fadeIn(100);
+    // disableScroll();
+  });
 
   $('.tickets-btn').click(function() {
     $('.modal-backdrop').fadeIn(100);
-    $('.tickets-modal').fadeIn(100);
+    $('.modal.tickets').fadeIn(100);
     // disableScroll();
   });
 
   $('.modal-backdrop').click(function() {
     $('.modal-backdrop').fadeOut(100);
-    $('.tickets-modal').fadeOut(100);
+    $('.modal').fadeOut(100);
     enableScroll();
   });
 
   $('.modal-backbtn').click(function() {
     $('.modal-backdrop').fadeOut(100);
-    $('.tickets-modal').fadeOut(100);
+    $('.modal').fadeOut(100);
     enableScroll();
   });
 
+  $('.later').click(function() {
+    $('.modal-backdrop').fadeOut(100);
+    $('.modal').fadeOut(100);
+    enableScroll();
+  });
+  
   $('input[type="radio"]').click(function() {
       ticketType = $(this).attr("value");
       setBoxText();
@@ -73,9 +83,12 @@ $(document).ready(function(){
   });
 
 
-  /* Hamburger menu */
+
+  /* Hamburger menu **********************************/
+
   let bg = $(".hamburger-bg");
   let menuOptions = $("#menu");
+  let notImplemented = $("#menu.not-implemented");
   let menuNav = $("#menu-nav");
 
   $("#hamburger").click(function() {
@@ -100,9 +113,15 @@ $(document).ready(function(){
       enableScroll();
     });
 
+    notImplemented.click(function() {
+      $('.modal-backdrop').fadeIn(100);
+      $('.modal.not-implemented-modal').fadeIn(100);
+      // disableScroll();
+    });
+
 });
 
-/* Hero news carousel */
+/* Hero news carousel **********************************/
 
 const slider = document.querySelector('.slider');
 const leftArrow = document.querySelector('.left');

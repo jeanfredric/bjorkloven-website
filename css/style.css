@@ -244,13 +244,21 @@ a {
 .main-nav .next-game {
   grid-column: 4 / span 6;
   text-align: center;
-  margin-bottom: 0.8rem;
+}
+
+.next-game p {
+  display: inline;
+}
+
+.main-nav .next-game p:hover {
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .main-nav ul {
   grid-column: 10 / span 3;
   display: flex; /* To place links next to each other instead of on top of */
-  justify-content: flex-end;  
+  justify-content: flex-end;
+  margin-top: 0.8rem;
 }
 
 .main-nav ul li a {
@@ -260,11 +268,11 @@ a {
 }
 
 .main-nav .navbtn-primary:hover {
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 .main-nav .navbtn-secondary:hover {
-  border-bottom: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .main-nav  .hamburger-menu {
@@ -607,20 +615,34 @@ input[type=text] {
 }
 
 /* Modal */
-.tickets-modal {
+
+.modal {
+  z-index: 3;
   display: none;
   position: fixed;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -30%);
-
+  
   width: 380px;
   height: 500px;
   background: var(--light-color);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
+.modal.not-implemented-modal {
+  text-align: center;
+}
+
+.not-implemented-modal img {
+  width: 150px;
+  display: block;
+  margin: 50px auto;
+
+}
+
 .modal-backdrop {
+  z-index: 2;
   display: none;
   position: fixed;
   top: 0;
@@ -630,12 +652,12 @@ input[type=text] {
   background: rgba(20, 20, 20, 0.9);
 }
 
-.tickets-modal h2, .tickets-modal h3{
+.modal h2, .modal.tickets h3{
   color: var(--dark-color);
   text-align: center;
 }
 
-.tickets-modal h2 {
+.modal h2 {
   padding-top: 2rem;
 }
 
@@ -644,19 +666,19 @@ input[type=text] {
   color: var(--dark-color-medium);
 }
 
-.tickets-modal p {
+.modal p {
   color: var(--dark-color);
   display: inline;
   font-weight: 400;
   font-size: 1.4rem;
 }
 
-.tickets-modal form {
+.modal form {
   margin-left: 32px;
   margin-top: 16px;
 }
 
-.modal-cross {
+.modal-backbtn {
   position: absolute;
   top: 6px;
   right: 6px;
@@ -742,6 +764,10 @@ input[type=text] {
   text-align: center;
 }
 
+.later, .later:hover {
+  background: var(--dark-color);
+}
+
 /* Radio Buttons */
 
 input[type='radio']:after {
@@ -775,6 +801,7 @@ input[type='radio']:checked:after {
 /* Hamburger menu v2 */
 
 .hamburger-bg {
+  z-index: 2;
   display: none;
   position: absolute;
   top: 50%;

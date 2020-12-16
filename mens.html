@@ -22,10 +22,10 @@ crossorigin="anonymous" defer></script>
   <div class="container">
     <nav class="main-nav">
       <a href="ladies.html" class="navbtn-ladies"><i class="material-icons icon-align-to-text">chevron_left</i>TILL DAMLAGET</a>
-      <a href="#" class="next-game"><p>NÄSTA HEMMAMATCH: BJÖRKLÖVEN - MODO 28/2</p></a>
+      <a href="#" class="next-game tickets-btn"><p>NÄSTA HEMMAMATCH: BJÖRKLÖVEN - MODO 28/2</p></a>
       <ul>
         <li><a href="tickets.html" class="navbtn-primary">BILJETTER</a></li>
-        <li><a href="shop.html" class="navbtn-secondary">SHOP</a></li>
+        <li><a href="#" class="navbtn-secondary not-implemented">SHOP</a></li>
         <li><a href="#" id="hamburger"><i class="material-icons icon-align-to-text hamburger-menu md-36">menu</i></a></li>
       </ul>
     </nav>
@@ -45,7 +45,7 @@ crossorigin="anonymous" defer></script>
             <p>Fredag 28 Februari 19:00</p>
             <span> <!-- Span to place buttons next to each other -->
               <a href="#" class="btn-primary tickets-btn">KÖP BILJETT</a>
-              <a href="article.html" class="btn-secondary">INFÖR</a>
+              <a href="#" class="btn-secondary not-implemented">INFÖR</a>
             </span>
           </div>
         </div>
@@ -58,8 +58,7 @@ crossorigin="anonymous" defer></script>
             <h2>Lucky Liss t-shirt!</h2>
             <p>Publikfavoriten Olle Liss har dedikerats en alldeles egen t-shirt. Souveniren finns endast i limiterad upplaga, skynda och köp innan den tar slut!</p>
             <span> <!-- Span to place buttons next to each other -->
-              <!-- <a href="#" class="btn-primary tickets-btn">KÖP BILJETT</a> -->
-              <a href="article.html" class="btn-secondary">TILL SHOPEN</a>
+              <a href="#" class="btn-secondary not-implemented">TILL SHOPEN</a>
             </span>
           </div>
         </div>
@@ -72,8 +71,8 @@ crossorigin="anonymous" defer></script>
             <h2></h2>
             <p>Björklöven tog på tisdagen tredje raka seger, mycket tack vare en fullsatt A3 Arena. Timrå stod för motståndet och slutresultatet skrevs till 4-1.</p>
             <span> <!-- Span to place buttons next to each other -->
-              <a href="#" class="btn-secondary">HÖJPUNKTER</a>
-              <a href="article.html" class="btn-secondary">LÄS MER</a>
+              <a href="#" class="btn-secondary not-implemented">HÖJPUNKTER</a>
+              <a href="#" class="btn-secondary not-implemented">LÄS MER</a>
             </span>
           </div>
         </div>
@@ -296,12 +295,11 @@ crossorigin="anonymous" defer></script>
     </div>
   </footer>
 
-
   <!-- Tickets modal -->
   <div class="modal-backdrop">
   </div>
-  <div class="tickets-modal">
-    <a href="#" class="modal-cross"><i class="material-icons modal-backbtn">clear</i></a>
+  <div class="modal tickets">
+    <a href="#" class="modal-backbtn"><i class="material-icons">clear</i></a>
     <h2>BILJETTER</h2>
     <h3>Björklöven - Modo</h3>
     <h3 class="date">Fredag 28 Februari</h3>
@@ -369,31 +367,44 @@ crossorigin="anonymous" defer></script>
 
   <!-- Hamburger menu -->
 
-<!-- Background -->
-<div class="hamburger-bg">
-  <!-- CSS Grid Container-->
-  <div class="container">    
-    <!-- CSS Grid-->
-    <div class="grid">
-      
-      <!-- Navigation bar -->
-      <nav id="menu-nav">
-        <a href="mens.html"><i class="material-icons icon-align-to-text back-menu md-36">clear</i></a>
-      </nav>
-      <!-- Menu -->
-      <section id="menu">
-        <ul>
-          <li><a href="tickets.html"><h1>BILJETTER</h1></a></li>
-          <li><a href="shop.html"><h1>SOUVENIRSHOP</h1></a></li>
-          <li><a href="mens.html#statistics"><h1>TABELL & STATISTK</h1></a></li>
-          <li><a href="news.html"><h1>NYHETER</h1></a></li>
-          <li><a href="ladies.html"><h1>DAMLAGET</h1></a></li>
-        </ul>
-      </section>
+  <!-- Background -->
+  <div class="hamburger-bg">
+    <!-- CSS Grid Container-->
+    <div class="container">    
+      <!-- CSS Grid-->
+      <div class="grid">
+        
+        <!-- Navigation bar -->
+        <nav id="menu-nav">
+          <a href="mens.html"><i class="material-icons icon-align-to-text back-menu md-36">clear</i></a>
+        </nav>
+        <!-- Menu -->
+        <section id="menu">
+          <ul>
+            <li><a href="#" class="not-implemented"><h1>BILJETTER</h1></a></li>
+            <li><a href="#" class="not-implemented"><h1>SOUVENIRSHOP</h1></a></li>
+            <li><a href="mens.html#statistics"><h1>TABELL & STATISTK</h1></a></li>
+            <li><a href="#"><h1>NYHETER</h1></a></li>
+            <li><a href="ladies.html"><h1>DAMLAGET</h1></a></li>
+          </ul>
+        </section>
 
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- Not yet implemented modal -->
+  <!-- bara att kalla på modal-backdrop, behöver ej köras igen -->
+  <div class="modal not-implemented-modal">
+    <a href="#" class="modal-backbtn"><i class="material-icons">clear</i></a>
+    <h2>Whopsie!</h2>
+    <p>This one is not yet implemented.</p>
+    <img src="img/grimacing-emoji.png" alt="Whopsie!">
+    <a href="#" class="btn-primary payment-btn later">I'LL CHECK IT OUT LATER</a>
+
+  </div>
+
+
 
 </body>
 </html>
