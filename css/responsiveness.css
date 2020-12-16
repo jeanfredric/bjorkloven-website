@@ -1,7 +1,6 @@
 @media(max-width: 1115px) {
   .main-nav ul {
     grid-column: 12;
-    width: 7rem;
   }
 
 
@@ -42,7 +41,7 @@
     display: none;
   }
 
-  .main-nav p {
+  .main-nav .next-game {
     grid-column: 1 / span 11;
     text-align: left;
     margin-left: 1rem;
@@ -80,6 +79,10 @@
 
   footer input[type=text] {
     width: 100px;
+  }
+
+  .chevron {
+    display: none;
   }
   
 }
@@ -154,4 +157,12 @@
     height: 50vh;
     padding-bottom: 0;
   }
+
+  section .text-content {
+    width: 90%;
+  }
+  
+  .text-content p {
+    max-width: 80%;
+  }  
 }

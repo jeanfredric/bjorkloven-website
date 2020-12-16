@@ -38,6 +38,10 @@ footer .flex {
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 100vh;
+  width: 100vw;
+  max-width: var(--max-width);
 }
 
 /* Fonts and text */
@@ -501,7 +505,7 @@ audio {
   display: flex;
   flex-direction: column;
   align-items: center; /* Vertikalt */
-  margin: 4rem 0 6rem 0; 
+  margin: 0;
 }
 
 .statistics-menu ul {
@@ -515,9 +519,13 @@ audio {
 
 
 #statistics table {
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
   font-family: gotham;
   grid-column: 2 / span 10;
-  grid-row: 2 / span 10;
+  grid-row: 3 / span 9;
   border-collapse: collapse;
   width: 100%;
 }
@@ -569,21 +577,18 @@ audio {
 /* Footer */
 
 footer {
-  /* display: flex; */
-  /* height: 20vh; */
-  /* width: 100vw; */
   background: var(--dark-color);
   color: var(--light-color);
-  /* align-items: flex-end; */
 }
 
 footer h3 {
   font-weight: 400;
+  font-size: 1.8rem;
 }
 
 footer .footer-column {
   width: 100%;
-  padding: 3vh 0;
+  padding: 5vh 0;
   /* border-top: rgba(235, 235, 235, 0.05) 1.5px solid; */
 
   display: flex;
@@ -594,7 +599,7 @@ footer .footer-column {
 .footer-column ul li a{
   color: var(--light-color);
   font-family: gotham;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 1.2rem;
   
 }
