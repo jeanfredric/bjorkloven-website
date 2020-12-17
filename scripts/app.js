@@ -63,12 +63,6 @@ $(document).ready(function(){
     enableScroll();
   });
 
-  $('.later').click(function() {
-    $('.modal-backdrop').fadeOut(100);
-    $('.modal').fadeOut(100);
-    enableScroll();
-  });
-  
   $('input[type="radio"]').click(function() {
       ticketType = $(this).attr("value");
       setBoxText();
@@ -114,9 +108,7 @@ $(document).ready(function(){
     });
 
     notImplemented.click(function() {
-      $('.modal-backdrop').fadeIn(100);
-      $('.modal.not-implemented-modal').fadeIn(100);
-      // disableScroll();
+
     });
 
 });
